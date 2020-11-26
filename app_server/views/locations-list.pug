@@ -1,0 +1,24 @@
+extends layout
+
+include _includes/sharedHTMLfunctions
+
+block content
+  .row.banner
+    .col-12
+      h1= pageHeader.title
+        small &nbsp;#{pageHeader.strapLine}
+
+  .row
+    .col-12.col-md-8
+      .error= message
+
+        app-home-list
+
+
+    .col-12.col-md-4
+      p.lead= sidebar
+
+block scripts
+  script(src='/build/runtime.ec2944dd8b20ec099bf3.js')
+  script(src='/build/polyfills.d1c7bf4a2ae7c3435f95.js')
+  script(src='/build/main.ea65ec4eeaac09dcca2d.js')
